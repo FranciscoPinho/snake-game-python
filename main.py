@@ -13,7 +13,6 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
-scoreboard.set_high_score_from_file()
 
 screen.listen()
 screen.onkey(snake.up, "Up")

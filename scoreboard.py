@@ -1,6 +1,7 @@
 from turtle import Turtle
 import os
 
+
 class Scoreboard(Turtle):
 
     def __init__(self):
@@ -11,6 +12,7 @@ class Scoreboard(Turtle):
         self.hideturtle()
         self.penup()
         self.goto(0, 270)
+        self.set_high_score_from_file()
         self.write_score()
 
     def write_score(self):
@@ -34,7 +36,6 @@ class Scoreboard(Turtle):
             with open("highscore.txt") as file:
                 contents = int(file.read())
                 self.high_score = contents
-                self.write_score()
 
 
     # def game_over(self):
